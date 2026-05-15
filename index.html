@@ -19,83 +19,96 @@
       </a>
       <div class="header-actions">
         <a class="header-button header-button-primary" href="#calculator" data-action="scroll-calculator">
-          <span class="header-label-full">Calcular minha perda</span>
-          <span class="header-label-short">Calcular perda</span>
+          <span class="header-label-full">Calcular perda</span>
+          <span class="header-label-short">Calcular</span>
         </a>
-        <a class="header-button header-button-secondary" href="#" data-action="whatsapp" data-message="Olá, tenho dúvidas sobre o sistema próprio de pedidos para restaurantes.">Tirar dúvidas</a>
       </div>
     </div>
   </header>
 
   <main id="topo">
     <section class="hero">
-      <div class="hero-copy">
-        <p class="ad-hook">Quanto do seu lucro fica com o app?</p>
-        <h1>Quanto do seu lucro fica com os apps de delivery?</h1>
-        <p class="hero-subtitle">Seu restaurante pode estar perdendo milhares por mês em taxas de apps de delivery. Venda direto para seus clientes com seu próprio sistema.</p>
+      <div class="hero-content">
+        <div class="hero-copy">
+          <p class="ad-hook">Quanto do seu lucro fica com os apps?</p>
+          <h1>Quanto você perde em taxas?</h1>
+          <p class="hero-highlight">200 pedidos/mês podem significar R$ 1.600 indo embora.</p>
+          <p class="hero-subtitle">Venda direto, reduza a dependência dos apps e fique com mais margem em cada pedido.</p>
+          <p class="hero-objection">Você não precisa abandonar os apps. Precisa parar de depender só deles.</p>
 
-        <div class="hero-actions">
-          <div class="hero-cta-row">
-            <a class="primary-button hero-button" href="#calculator" data-action="scroll-calculator">Calcular minha perda</a>
-            <a class="secondary-button" href="#" data-action="whatsapp" data-message="Olá, quero ver uma demonstração do sistema próprio de pedidos para restaurantes.">Ver demonstração</a>
+          <div class="hero-actions">
+            <div class="hero-cta-row">
+              <a class="primary-button hero-button" href="#calculator" data-action="scroll-calculator">Calcular minha perda</a>
+              <a class="secondary-button" href="#" data-action="whatsapp" data-message="Olá, quero ver como funciona o sistema próprio de pedidos para restaurantes.">Ver como funciona</a>
+            </div>
           </div>
-          <span>Veja em segundos quanto pode estar indo embora em taxas</span>
         </div>
 
-        <div class="hero-pills" aria-label="Principais beneficios">
-          <span>Mais margem em cada pedido.</span>
-          <span>Clientes comprando direto com você.</span>
-          <span>Seu restaurante, seus clientes, suas regras.</span>
-        </div>
-      </div>
-
-      <div class="hero-panel" aria-label="Simulacao de perdas com taxas">
-        <div class="loss-card">
-          <div class="loss-card-head">
-            <span class="card-label">Simulação rápida</span>
-            <span class="loss-badge">DINHEIRO INDO EMBORA</span>
-          </div>
-          <div class="calc-row">
-            <span>200 pedidos/mês</span>
-            <strong>R$ 8.000</strong>
-          </div>
-          <div class="calc-row">
-            <span>Ticket médio</span>
-            <strong>R$ 40</strong>
-          </div>
-          <div class="calc-row danger">
-            <span>Taxa de 20%</span>
-            <strong>- R$ 1.600</strong>
+        <div class="hero-visual" aria-label="Calculadora de perda em taxas">
+          <div class="loss-card">
+            <div class="loss-card-head">
+              <span class="card-label">Simule sua perda</span>
+            </div>
+          <div class="hero-calculator">
+            <label>
+              Pedidos/mês
+              <input id="hero-orders" type="number" min="0" value="200" inputmode="numeric">
+            </label>
+            <label>
+              Ticket médio
+              <input id="hero-ticket" type="number" min="0" value="40" inputmode="decimal">
+            </label>
+            <label>
+              Taxa %
+              <input id="hero-fee" type="number" min="0" max="100" value="20" inputmode="decimal">
+            </label>
           </div>
           <div class="loss-result">
-            <span>Você pode estar perdendo</span>
-            <strong>R$ 1.600</strong>
-            <small>todo mês em taxas</small>
+            <span>perda estimada em taxas</span>
+            <strong><span id="hero-result">R$ 1.600,00</span>/mês</strong>
           </div>
-          <a class="simulation-link" href="#" data-action="whatsapp" data-message="Olá, quero entender como meu restaurante pode recuperar margem vendendo direto e reduzindo a dependência dos apps de delivery.">Quero recuperar minha margem</a>
-        </div>
+          <p class="loss-urgency">Cada dia vendendo só por apps = mais margem perdida.</p>
+            <a class="simulation-link" href="#" data-action="hero-calculator-whatsapp">Quero recuperar essa margem</a>
+          </div>
 
-        <div class="phone-visual" aria-label="Celular com app de delivery">
-          <div class="phone-speaker"></div>
-          <div class="delivery-screen">
-            <div class="delivery-alert">APP DELIVERY</div>
-            <div class="money-flow">
-              <span>R$</span>
-              <span>R$</span>
-              <span>R$</span>
-            </div>
-            <div class="fee-block">
-              <small>Taxas por pedido</small>
-              <strong>até 30%</strong>
+          <div class="phone-visual" aria-hidden="true">
+            <div class="phone-speaker"></div>
+            <div class="delivery-screen">
+              <div class="delivery-alert">APP DELIVERY</div>
+              <div class="money-flow">
+                <span>R$</span>
+                <span>R$</span>
+              </div>
+              <div class="fee-block">
+                <small>Taxas</small>
+                <strong>até 30%</strong>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="hero-mobile-actions">
-        <a class="primary-button hero-button" href="#calculator" data-action="scroll-calculator">Calcular minha perda</a>
-        <a class="secondary-button" href="#" data-action="whatsapp" data-message="Olá, quero ver uma demonstração do sistema próprio de pedidos para restaurantes.">Ver demonstração</a>
-        <span>Veja em segundos quanto pode estar indo embora em taxas</span>
+    <section class="reason-strip" aria-labelledby="reason-title">
+      <div class="container">
+        <div class="reason-header">
+          <span>Por que criar um canal próprio?</span>
+          <h2 id="reason-title">Venda direto sem depender só dos apps.</h2>
+        </div>
+        <div class="reason-grid">
+          <article class="reason-card">
+            <h3>Mais margem</h3>
+            <p>Cada pedido direto reduz sua dependência de taxas.</p>
+          </article>
+          <article class="reason-card">
+            <h3>Clientes seus</h3>
+            <p>Construa uma base para vender novamente.</p>
+          </article>
+          <article class="reason-card">
+            <h3>Menos bagunça</h3>
+            <p>Pedidos organizados sem depender só do WhatsApp.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -105,11 +118,11 @@
         <h2>Você não perde só dinheiro. Você perde controle.</h2>
       </div>
       <div class="cards-grid pain-grid">
-        <article><span>!</span><h3>Taxas altas em cada pedido</h3></article>
-        <article><span>@</span><h3>Cliente compra pelo app, não pelo seu restaurante</h3></article>
-        <article><span>#</span><h3>Pouco controle sobre dados e recorrência</h3></article>
-        <article><span>?</span><h3>Pedidos no WhatsApp viram bagunça</h3></article>
-        <article><span>%</span><h3>Promoções dependem de plataformas de terceiros</h3></article>
+        <article><span>!</span><h3>Cada pedido reduz sua margem</h3><p>Parte do lucro vai embora antes mesmo do dinheiro cair no caixa.</p></article>
+        <article><span>@</span><h3>O cliente não é realmente seu</h3><p>Ele compra pelo app, recebe ofertas do app e pode nunca voltar direto para você.</p></article>
+        <article><span>#</span><h3>Você paga para acessar seu próprio público</h3><p>Mesmo quando o cliente já conhece seu restaurante, a venda ainda pode passar por terceiros.</p></article>
+        <article><span>?</span><h3>WhatsApp vira bagunça</h3><p>Pedido incompleto, demora para responder e risco de erro na operação.</p></article>
+        <article><span>%</span><h3>Promoção sem controle</h3><p>Você depende das regras, taxas e limitações de plataformas externas.</p></article>
       </div>
     </section>
 
@@ -124,49 +137,49 @@
         <div class="solution-grid">
           <article>
             <span class="solution-icon">01</span>
-            <h3>Cardápio online</h3>
+            <h3>Seu link próprio de pedidos</h3>
             <p>Seu cliente acessa o menu pelo link, escolhe os produtos e envia o pedido sem confusão.</p>
             <strong>Menos mensagens repetidas.</strong>
           </article>
           <article>
             <span class="solution-icon">02</span>
-            <h3>Pedidos automáticos</h3>
+            <h3>Pedidos organizados sem confusão</h3>
             <p>Os pedidos chegam organizados, com itens, observações, valores e dados do cliente.</p>
             <strong>Mais agilidade no atendimento.</strong>
           </article>
           <article>
             <span class="solution-icon">03</span>
-            <h3>Pagamento online</h3>
+            <h3>Menos cobrança manual</h3>
             <p>Permita pagamentos por Pix, cartão ou link, dependendo da integração escolhida.</p>
             <strong>Menos cobrança manual.</strong>
           </article>
           <article>
             <span class="solution-icon">04</span>
-            <h3>WhatsApp integrado</h3>
+            <h3>Atendimento mais rápido</h3>
             <p>O cliente pode finalizar o pedido e conversar com sua equipe pelo WhatsApp.</p>
             <strong>Atendimento mais rápido.</strong>
           </article>
           <article>
             <span class="solution-icon">05</span>
-            <h3>Painel administrativo</h3>
+            <h3>Controle da operação</h3>
             <p>Cadastre produtos, altere preços, acompanhe pedidos e gerencie sua operação.</p>
             <strong>Controle em um só lugar.</strong>
           </article>
           <article>
             <span class="solution-icon">06</span>
-            <h3>Relatórios de pedidos</h3>
+            <h3>Saiba o que mais vende</h3>
             <p>Veja quais produtos vendem mais e acompanhe dados importantes do seu delivery.</p>
             <strong>Decisões com dados.</strong>
           </article>
           <article>
             <span class="solution-icon">07</span>
-            <h3>Cadastro de clientes</h3>
+            <h3>Clientes seus para vender de novo</h3>
             <p>Crie uma base própria de clientes para vender novamente sem depender de marketplaces.</p>
             <strong>Clientes seus de verdade.</strong>
           </article>
           <article>
             <span class="solution-icon">08</span>
-            <h3>Cupons e promoções</h3>
+            <h3>Campanhas sem depender de apps</h3>
             <p>Crie ofertas para incentivar recompra e divulgar campanhas próprias.</p>
             <strong>Mais recorrência.</strong>
           </article>
@@ -188,8 +201,8 @@
       <div class="steps">
         <article>
           <strong>1</strong>
-          <h3>Criamos seu cardápio online</h3>
-          <p>Produtos, adicionais, preços, horários e identidade do seu restaurante.</p>
+          <h3>Criamos seu canal direto</h3>
+          <p>Seu restaurante ganha um link próprio para receber pedidos sem depender só dos apps.</p>
         </article>
         <article>
           <strong>2</strong>
@@ -212,20 +225,6 @@
       <div class="contrast-card good">
         <span>Com sistema próprio</span>
         <strong>você vende direto e cria sua base de clientes.</strong>
-      </div>
-    </section>
-
-    <section class="authority-section section-block">
-      <div class="section-heading wide">
-        <p class="kicker">Feito para operação local</p>
-        <h2>Seu restaurante, seus clientes, suas regras.</h2>
-        <p>Desenvolvido para pequenos restaurantes que querem vender mais sem depender apenas de marketplaces.</p>
-      </div>
-      <div class="mini-cards">
-        <span>Implantação rápida</span>
-        <span>Suporte personalizado</span>
-        <span>Sistema sob medida</span>
-        <span>Foco em margem e controle</span>
       </div>
     </section>
 
@@ -253,6 +252,49 @@
           <span>por mês em taxas.</span>
         </div>
         <a class="primary-button" href="#" data-action="calculator-whatsapp">Quero reduzir essas taxas</a>
+      </div>
+    </section>
+
+    <section class="anchor-section section-block">
+      <div class="section-heading wide">
+        <p class="kicker">Custo de continuar igual</p>
+        <h2>Se você perde R$ 1.600 por mês em taxas, quanto custa continuar assim?</h2>
+        <p>Um sistema próprio não precisa substituir os apps de delivery no primeiro dia. Ele cria um canal direto para você reduzir dependência, aumentar margem e construir sua própria base de clientes.</p>
+      </div>
+      <div class="anchor-grid">
+        <article>
+          <span>01</span>
+          <h3>Menos dependência</h3>
+          <p>Você deixa de depender apenas do ranking, das regras e das promoções dos apps.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Mais margem</h3>
+          <p>Mais pedidos podem entrar pelo seu canal, com menos taxa drenando o resultado.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Mais recompra</h3>
+          <p>Clientes voltam pelo seu link, sua campanha e sua base, não só pelo marketplace.</p>
+        </article>
+      </div>
+      <div class="anchor-cta">
+        <a class="primary-button" href="#" data-action="whatsapp" data-message="Olá, quero vender direto e entender como reduzir a dependência dos apps de delivery.">Quero vender direto</a>
+      </div>
+    </section>
+
+    <section class="authority-section section-block">
+      <div class="section-heading wide">
+        <p class="kicker">Confiança para vender direto</p>
+        <h2>Criado para restaurantes que querem vender com mais controle</h2>
+        <p>Você não precisa abandonar os apps. Precisa parar de depender só deles.</p>
+      </div>
+      <div class="mini-cards">
+        <span>Implantação rápida</span>
+        <span>Suporte personalizado</span>
+        <span>Sistema sob medida</span>
+        <span>Foco em margem</span>
+        <span>Sem depender apenas de marketplace</span>
       </div>
     </section>
 
@@ -286,10 +328,28 @@
     </section>
 
     <section class="final-cta">
-      <p class="kicker">Venda direto</p>
-      <h2>Pare de depender só dos apps para vender.</h2>
-      <p>Entenda como vender direto sem depender apenas dos apps.</p>
-      <a class="primary-button" href="#" data-action="whatsapp" data-message="Olá, quero ver uma demonstração do sistema próprio de pedidos para restaurantes.">Ver demonstração do sistema</a>
+      <div class="final-cta-card">
+        <div class="final-cta-copy">
+          <p class="kicker">Próximo passo</p>
+          <h2>Venda direto. Fique com mais margem.</h2>
+          <p>Você não precisa abandonar os apps. Precisa criar um canal próprio para vender direto, reduzir taxas e construir uma base de clientes sua.</p>
+
+          <div class="final-cta-chips" aria-label="Benefícios principais">
+            <span>Menos dependência dos apps</span>
+            <span>Mais margem por pedido</span>
+            <span>Clientes seus para vender novamente</span>
+          </div>
+        </div>
+
+        <div class="final-proof-card">
+          <span>Exemplo de perda</span>
+          <p>200 pedidos/mês</p>
+          <strong>R$ 1.600/mês em taxas</strong>
+          <em>Isso pode virar margem recuperada.</em>
+          <a class="primary-button" href="#" data-action="whatsapp" data-message="Olá, quero ver como meu restaurante pode vender direto com um sistema próprio de pedidos e reduzir a dependência dos apps.">Quero vender direto agora</a>
+          <small>Demonstração rápida pelo WhatsApp</small>
+        </div>
+      </div>
     </section>
   </main>
 
